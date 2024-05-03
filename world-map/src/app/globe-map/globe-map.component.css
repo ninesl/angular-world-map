@@ -24,7 +24,7 @@ path {
 }
 
 path:hover {
-    fill: #d77d7d;
-    stroke: red;
+    stroke: #a90000;
+    fill: #e19d9d;
     transition: all 0.35s ease;
 }

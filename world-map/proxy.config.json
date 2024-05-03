@@ -1,0 +1,10 @@
+{
+    "/countryApi" : {
+        "target": "http://api.worldbank.org",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/countryApi": ""
+        }
+    }
+}
