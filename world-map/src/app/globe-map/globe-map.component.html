@@ -1,5 +1,5 @@
 <main>
-    <div>
+    <div class="map-container">
         <!-- The SVG of the world -->
         <svg
    xmlns:mapsvg="http://mapsvg.com"
@@ -1037,7 +1037,32 @@
      id="ZW" />
         </svg>
     </div>
-    <div class="country-info">
-        <p>placeholder</p>
+    <div class="countryInfo">
+      <div class="table">
+         <tr>
+            <td>Name</td>
+            <td>{{ countryInfo.name }}</td>
+         </tr>
+         <tr>
+            <td>Capital</td>
+            <td>{{ countryInfo.capital }}</td>
+         </tr>
+         <tr>
+            <td>Region</td>
+            <td>{{ countryInfo.region }}</td>
+         </tr>
+         <tr>
+            <td>Income</td>
+            <td>{{ countryInfo.income }}</td>
+         </tr>
+         <tr>
+            <td>Latitude</td>
+            <td>{{ countryInfo.latitude }}</td>
+         </tr>
+         <tr>
+            <td>Longitude</td>
+            <td>{{ countryInfo.longitude }}</td>
+         </tr>
+        </div>
     </div>
 </main>

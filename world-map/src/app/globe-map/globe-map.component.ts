@@ -10,10 +10,12 @@ import { ApiService } from '../api.service';
 })
 export class GlobeMapComponent {
 
+  countryInfo: any = {}
+
   constructor (private apiService: ApiService) {}
 
   setCountryData(event: any) {
-    let countryData = this.apiService.setCountryInfo(event.target.id);
+    this.countryInfo = this.apiService.setCountryInfo(event.target.id);
     // console.log(countryData);
     // console.log(data)
   }

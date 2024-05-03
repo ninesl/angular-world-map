@@ -8,6 +8,15 @@ import { Subject } from 'rxjs';
 
 export class ApiService {
 
+  countryInfo = {
+    name: String,
+    capital: String,
+    region: String,
+    income: String,
+    longitude: String,
+    latitude: String
+  }
+
   constructor(private http: HttpClient) { }
 
   getCountryInfo(countryCode: string) {
@@ -17,28 +26,21 @@ export class ApiService {
   }
 
   setCountryInfo(countryCode: string) {
-    let countryInfo = {
-      name: String,
-      capital: String,
-      region: String,
-      income: String,
-      longitude: String,
-      latitude: String
-    }
 
     this.getCountryInfo(countryCode).subscribe((data: any) => {
 
       let cData = data[1][0]
       //gets 2nd index in array from fetched JSON
       //country is only element in 2nd element
-      countryInfo.name = cData.name;
-      countryInfo.capital = cData.capitalCity;
-      countryInfo.region = cData.region.value;
-      countryInfo.income = cData.incomeLevel.value;
-      countryInfo.longitude = cData.longitude;
-      countryInfo.latitude = cData.latitude;
+      this.countryInfo.name = cData.name;
+      this.countryInfo.capital = cData.capitalCity;
+      this.countryInfo.region = cData.region.value;
+      this.countryInfo.income = cData.incomeLevel.value;
+      this.countryInfo.longitude = cData.longitude;
+      this.countryInfo.latitude = cData.latitude;
+
     })
+    return this.countryInfo;
     // console.log(countryInfo);
-    return countryInfo;
   }
 }
