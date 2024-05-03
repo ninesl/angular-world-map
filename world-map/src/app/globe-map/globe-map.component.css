@@ -1,0 +1,30 @@
+main {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: visible;
+
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+}
+.country-info {
+    text-align: center;
+    background-color: #c2e7ff;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #00538b;
+    width: 25%;
+}
+
+path {
+    fill: #094109;
+}
+
+path:hover {
+    fill: #d77d7d;
+    stroke: red;
+    transition: all 0.35s ease;
+}
